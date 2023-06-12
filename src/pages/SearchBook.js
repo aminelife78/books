@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import {
   Button,
@@ -38,9 +38,11 @@ const SearchBook = () => {
 
   const notify = () => toast.success("Livre bien enregistrer");
 
-
   return (
-    <Container fluid className="d-flex flex-column justify-content-center px-0 vw-100">
+    <Container
+      fluid
+      className="d-flex flex-column justify-content-center px-0 vw-100  "
+    >
       <Row className="bg-light w-100">
         <Row className="mt-4">
           <Col>
@@ -67,7 +69,7 @@ const SearchBook = () => {
           </Col>
         </Row>
       </Row>
-      <Container className="mx-auto vh-100">
+      <Container className="mx-auto min-vh-100   ">
         <Row className="pt-5 d-flex justify-content-center">
           <Col xs={8}>
             <FlipMove>
@@ -108,17 +110,16 @@ const SearchBook = () => {
                                 Plus dinfos
                               </Card.Link>
                               <Card.Link
-                                onClick={() =>{
+                                onClick={() => {
                                   dispatch(
                                     addBook({
                                       id: uid(),
                                       title: book.volumeInfo.title,
                                       auteur: book.volumeInfo.authors,
                                     })
-                                  )
-                                  notify()
-                                }
-                                }
+                                  );
+                                  notify();
+                                }}
                                 href="#"
                               >
                                 Enregistrer
