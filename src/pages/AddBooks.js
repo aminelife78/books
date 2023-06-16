@@ -39,8 +39,8 @@ const AddBooks = () => {
             <p>Ajouter un livre à votre bibliothèque</p>
           </Col>
         </Row>
-        <Row className="d-flex  justify-content-center my-4">
-          <Col xs={3}>
+        <Row className="d-flex   justify-content-center my-4 ms-2">
+          <Col sm={3} className="mb-2">
             <Form.Control
               name="title"
               value={book.title}
@@ -50,7 +50,7 @@ const AddBooks = () => {
               placeholder="Titre"
             />
           </Col>
-          <Col xs={3}>
+          <Col sm={3} className="mb-4">
             <Form.Control
               name="auteur"
               value={book.auteur}
@@ -60,7 +60,7 @@ const AddBooks = () => {
               placeholder="Auteur"
             />
           </Col>
-          <Col xs={2}>
+          <Col sm={2}>
             <Button onClick={onsubmit} variant="primary">
               Ajouter un livre{" "}
             </Button>
@@ -68,8 +68,8 @@ const AddBooks = () => {
         </Row>
       </Row>
       <Container className="mx-auto py-3 vh-100">
-        <Row className=" d-flex justify-content-center">
-          <Col xs={8}>
+        <Row className=" d-flex  justify-content-center ">
+          <Col sm={10}>
             <ListGroup className="text-start ps-3">
               <FlipMove>
                 {myBooks.error ? <p>{myBooks.error}</p> : null}

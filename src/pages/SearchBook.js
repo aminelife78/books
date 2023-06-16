@@ -41,17 +41,17 @@ const SearchBook = () => {
   return (
     <Container
       fluid
-      className="d-flex flex-column justify-content-center px-0 vw-100  "
+      className="d-flex flex-column  justify-content-center px-0 vw-100  "
     >
-      <Row className="bg-light w-100">
+      <Row className="bg-light w-100 ">
         <Row className="mt-4">
           <Col>
             <h2> BOOKS</h2>
             <p>Indiquer le sujet de livre à rechercher sur Google API</p>
           </Col>
         </Row>
-        <Row className="d-flex  justify-content-center my-4">
-          <Col xs={4}>
+        <Row className="d-flex   justify-content-center ms-2  my-4">
+          <Col sm={4} className="mb-2" >
             <Form.Control
               name="title"
               value={subject}
@@ -62,7 +62,7 @@ const SearchBook = () => {
             />
           </Col>
 
-          <Col xs={2}>
+          <Col sm={2}>
             <Button onClick={onsubmit} variant="primary">
               Rechercher
             </Button>
